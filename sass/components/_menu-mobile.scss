@@ -35,6 +35,7 @@
 	&-nav {
 		display: flex;
 		flex-direction: column;
+		max-height: 100vh;
 		.menu__mobile-item:not(:first-child) {
 			margin: 32px 0;
 		}
@@ -49,6 +50,7 @@
 	}
 	&-list {
 		flex-basis: calc(100vh - 280px);
+		flex-shrink: 2;
 	}
 	&-contact {
 		.menu__mobile-contact-item {
