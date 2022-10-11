@@ -1,0 +1,24 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/common";
+
+@import "./components/menu-mobile";
+@import "./components/btn";
+@import "./components/btn-gallery";
+@import "./components/logo";
+@import "./components/title";
+@import "./components/backdrop";
+@import "./components/social-link";
+@import "./components/footer-social-link";
+@import "./components/modal-agreement";
+
+@import "./layout/header";
+@import "./layout/banner";
+@import "./layout/feature";
+@import "./layout/projects";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/gallery";
+@import "./layout/modal-form";

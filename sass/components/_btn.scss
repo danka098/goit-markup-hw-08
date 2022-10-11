@@ -1,0 +1,19 @@
+.btn {
+	font-family: "Roboto", sans-serif;
+	font-size: getSize("caption&btn");
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-weight: 700;
+	line-height: 1.875;
+	letter-spacing: 0.06em;
+	&--banner,
+	&--footer,
+	&--modal {
+		color: #ffffff;
+		width: 200px;
+		height: 50px;
+		background: getColor("active-element");
+	}
+}

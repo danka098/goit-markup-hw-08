@@ -1,0 +1,139 @@
+.header {
+	border-bottom: 1px solid #ececec;
+	.container {
+		display: flex;
+		width: 100%;
+		.logo-container {
+			align-items: center;
+			padding: 24px 93px 25px 0;
+		}
+	}
+	&__contact-list {
+		display: flex;
+		gap: 46px;
+		align-items: center;
+		margin-left: auto;
+	}
+	&__contact-link {
+		font-weight: 500;
+		font-size: getSize("menuSize");
+		line-height: 1.143;
+		letter-spacing: 0.02em;
+		transition: color $mainTransition;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: getColor("secondary");
+		&:hover,
+		&:focus {
+			color: getColor("active-element");
+		}
+		&:hover .header__contact-icon,
+		&:focus .header__contact-icon {
+			fill: getColor("active-element");
+		}
+		.header__contact-icon {
+			transition: fill $mainTransition;
+		}
+	}
+}
+.menu {
+	display: flex;
+	align-items: center;
+	&__item-list {
+		display: flex;
+		height: 100%;
+		gap: 46px;
+		align-items: center;
+		.menu__item {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			&--active {
+				position: relative;
+				height: 100%;
+				&::after {
+					content: "";
+					background-color: getColor("active-element");
+					height: 4px;
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+				}
+			}
+			.menu__link {
+				font-weight: 500;
+				font-size: getSize("menuSize");
+				line-height: 1.143;
+				letter-spacing: 0.02em;
+				color: getColor("main");
+				transition: color $mainTransition;
+				&:hover,
+				&:focus {
+					color: getColor("active-element");
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.header {
+		.menu,
+		&__contact-list,
+		.container > .logo-container {
+			display: none;
+		}
+		.menu__mobile {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			padding: 12px 15px;
+		}
+		.menu-toggle {
+			display: block;
+			background-color: transparent;
+			border: transparent;
+			padding: 0;
+			margin: 9px;
+			cursor: pointer;
+			transition: fill $mainTransition;
+			&:hover .menu-toggle__icon {
+				fill: getColor("active-element");
+			}
+		}
+		.logo-container {
+			align-self: center;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.header {
+		.menu__mobile,
+		.menu-toggle,
+		.menu-toggle__btn {
+			display: none;
+		}
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.header {
+		&__contact-list {
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+
+			gap: 10px;
+			.header__contact-link {
+				font-size: 12px;
+			}
+		}
+		&__contact-item:first-of-type .header__contact-icon {
+			width: 14px;
+			height: 10px;
+		}
+		&__contact-item:last-of-type .header__contact-icon {
+			width: 10px;
+			height: 14px;
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.modal {
+	&__agreement-text {
+		position: absolute;
+		bottom: 121px;
+		left: 65px;
+		font-size: 12px;
+		line-height: 24px;
+		letter-spacing: 0.03em;
+		color: getColor("secondary");
+		.modal__agreement-link {
+			text-decoration: underline;
+			color: getColor("active-element");
+		}
+	}
+	&__agreement-input {
+		opacity: 0;
+		&:checked + .modal__agreement-icon {
+			fill: getColor("active-element");
+			stroke: getColor("active-element");
+			border: transparent;
+		}
+	}
+	&__agreement-icon {
+		fill: #fff;
+		border: 1.5px solid getColor("main");
+		border-radius: 1px;
+		transition: fill $mainTransition, border $mainTransition;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.modal {
+		&__agreement-text {
+			bottom: 115px;
+			left: 77px;
+			font-size: getSize("menuSize");
+		}
+		&__agreement-icon {
+			position: absolute;
+			bottom: 120px;
+			left: 54px;
+		}
+	}
+}

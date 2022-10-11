@@ -1,0 +1,153 @@
+.footer {
+	background-color: #2f303a;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	.container {
+		display: flex;
+		align-items: center;
+	}
+	& .logo-webstudio {
+		margin-left: calc((100% - 131.94px) / 2);
+		color: #fff;
+	}
+	&__social-title,
+	&__signup-label {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 16px;
+		color: #fff;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	&__social-list {
+		display: flex;
+		gap: 10px;
+	}
+	&__signup-form {
+		width: 100%;
+	}
+	&__address {
+		font-size: getSize("menuSize");
+		line-height: 1.714;
+		font-style: normal;
+		min-width: 253px;
+		margin-top: 20px;
+		&-text {
+			color: #fff;
+			margin-bottom: 8px;
+		}
+	}
+	&__contact-item {
+		text-align: center;
+		.footer__contact-link {
+			color: rgba(255, 255, 255, 0.6);
+			transition: color $mainTransition;
+			&:hover,
+			&:focus {
+				color: getColor("active-element");
+			}
+		}
+		&:first-of-type {
+			margin-bottom: 8px;
+		}
+	}
+	&__signup-box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		.footer__signup-label:focus-within .footer__signup-input {
+			@include bordered(#fff);
+		}
+		.footer__signup-input {
+			padding-left: 16px;
+			width: 100%;
+			height: 50px;
+			background-color: transparent;
+			border-radius: 4px;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			color: #fff;
+			outline: none;
+			transition: border $mainTransition;
+			margin-top: 20px;
+		}
+	}
+	.btn--footer {
+		position: relative;
+		text-align: left;
+		padding-left: 42px;
+		.footer__signup-btn-icon {
+			fill: #fff;
+			position: absolute;
+			top: 13px;
+			right: 28px;
+		}
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.footer {
+		.container {
+			flex-direction: column;
+		}
+		&__social-box {
+			padding: $paddingSectionMobile;
+		}
+		&__signup-label {
+			flex-basis: 100%;
+		}
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.footer {
+		padding: 60px 89px 60px 76px;
+		.container {
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&__signup {
+			padding: 60px 60px 0 60px;
+			.footer__signup-label {
+				flex-basis: 100%;
+			}
+		}
+		&__social-box {
+			align-self: flex-start;
+			padding-top: 5px;
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	.footer {
+		.container {
+			align-items: baseline;
+			justify-content: space-between;
+		}
+		&__social-title,
+		&__contact-item {
+			text-align: left;
+		}
+		.logo-webstudio {
+			margin-left: 0;
+		}
+		&__signup-box {
+			justify-content: space-between;
+			align-items: baseline;
+			height: 86px;
+			width: 570px;
+			.footer__signup-label {
+				position: relative;
+			}
+			.footer__signup-input {
+				position: absolute;
+				top: 16px;
+				left: 0;
+				width: 358px;
+				margin-right: 12px;
+			}
+		}
+		.btn--footer {
+			align-self: end;
+		}
+	}
+}

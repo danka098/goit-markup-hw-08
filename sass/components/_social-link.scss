@@ -1,0 +1,22 @@
+.team__social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color $mainTransition;
+	.team__social-icon {
+		fill: getColor("icon-color");
+		transition: fill $mainTransition;
+	}
+	&:hover,
+	&:focus {
+		background-color: getColor("active-element");
+	}
+	&:hover .team__social-icon,
+	&:focus .team__social-icon {
+		fill: #ffffff;
+	}
+}

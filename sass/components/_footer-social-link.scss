@@ -1,0 +1,19 @@
+.footer__social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #44454f;
+	border-radius: 50%;
+	transition: background-color $timingTransition;
+	&:hover,
+	&:focus {
+		background-color: getColor("active-element");
+	}
+	.footer__social-icon {
+		fill: #fff;
+	}
+}

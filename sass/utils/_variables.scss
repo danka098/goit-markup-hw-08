@@ -1,0 +1,36 @@
+$colors: (
+	"main": #212121,
+	"secondary": #757575,
+	"third": #f5f4fa,
+	"icon-color": #afb1b8,
+	"active-element": #2196f3,
+);
+@function getColor($key) {
+	@return map-get($colors, $key);
+}
+
+$fontSize: (
+	"title": 36px,
+	"titleMobile": 28px,
+	"menuSize": 14px,
+	"menuMobileSize": 40px,
+	"label": 12px,
+	"caption&btn": 16px,
+	"h3": 18px,
+	"logo": 26px,
+);
+@function getSize($key) {
+	@return map-get($fontSize, $key);
+}
+
+$mainBoxShadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+$paddingSection: 94px 0 94px;
+$paddingSection2: 94px 0 0 0;
+$paddingSectionMobile: 60px 0 60px;
+$paddingSectionMobile2: 60px 0 0 0;
+$mainTransition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$timingTransition: cubic-bezier(0.4, 0, 0.2, 1);
+$gradientBanner: linear-gradient(
+	rgba(47, 48, 58, 0.4) 0%,
+	rgba(47, 48, 58, 0.4) 100%
+);

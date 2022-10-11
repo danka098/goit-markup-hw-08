@@ -1,0 +1,13 @@
+.main-title {
+	font-weight: 700;
+	line-height: 1.167;
+	text-align: center;
+	font-size: getSize("titleMobile");
+	margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+	.main-title {
+		font-size: getSize("title");
+		margin-bottom: 50px;
+	}
+}
