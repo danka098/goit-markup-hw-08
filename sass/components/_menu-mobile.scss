@@ -43,6 +43,7 @@
 			font-weight: 500;
 			font-size: getSize("menuMobileSize");
 			letter-spacing: 0.02em;
+			color: getColor("main");
 			&:hover {
 				color: getColor("active-element");
 			}
